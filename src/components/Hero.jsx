@@ -7,14 +7,18 @@ import CanvasLoader from "./CanvasLoader";
 import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "../constants";
 import Target from "./Target";
+import ReactLogo from "./ReactLogo";
+import Cube from "./Cube";
+import Rings from "./Rings";
+import HeroCamera from "./HeroCamera";
+import Button from "./Button";
 
 const Hero = () => {
- 
   const isSmall = useMediaQuery({ maxWidth: 440 });
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const isTable = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
 
-  const sizes=calculateSizes(isSmall,isMobile,isTable);
+  const sizes = calculateSizes(isSmall, isMobile, isTable);
   return (
     <section className="min-h-screen  w-full flex flex-col relative">
       <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
@@ -32,24 +36,35 @@ const Hero = () => {
         <Canvas className="w-full h-full">
           {/* camera */}
           <Suspense fallback={<CanvasLoader />}>
-            <PerspectiveCamera makeDefault position={[0, 0, 18]} />
-            <ComputerRoom
-             
-              position={sizes.deskPosition}
-              rotation={[0, -Math.PI, 0]}
-              scale={sizes.deskScale}
-            />
+            <PerspectiveCamera makeDefault position={[0, 0, 15]} />
 
-            <group>
+            <HeroCamera isMobile={isMobile}>
+              <ComputerRoom
+                position={sizes.deskPosition}
+                rotation={[0, -Math.PI, 0]}
+                scale={sizes.deskScale}
+              />
+            </HeroCamera>
+
+            {/* <group>
 
               <Target position={sizes.targetPosition}/>
+              <ReactLogo position={sizes.reactLogoPosition}/>
+              <Cube position={sizes.cubePosition}/>
+              <Rings position={sizes.ringPosition}/>
 
-            </group>
+            </group> */}
 
             <ambientLight intensity={1} />
             <directionalLight position={[10, 10, 10]} intensity={0.05} />
           </Suspense>
         </Canvas>
+      </div>
+      <div className=" absolute bottom-7 left-0 right-0 w-full z-10 c-space">
+        <a href="#contact" className="w-fit">
+          <Button name="Let's Work Together" isBeam containerClass="sm:w-fit w-fit sm:min-w-96"/>
+        </a>
+
       </div>
     </section>
   );
