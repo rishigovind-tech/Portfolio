@@ -45,15 +45,15 @@ const Hero = () => {
                 scale={sizes.deskScale}
               />
             </HeroCamera>
-
-            {/* <group>
+{/* 
+             <group>
 
               <Target position={sizes.targetPosition}/>
               <ReactLogo position={sizes.reactLogoPosition}/>
               <Cube position={sizes.cubePosition}/>
               <Rings position={sizes.ringPosition}/>
 
-            </group> */}
+            </group>  */}
 
             <ambientLight intensity={1} />
             <directionalLight position={[10, 10, 10]} intensity={0.05} />
