@@ -30,7 +30,7 @@ const Hero = () => {
         </p>
       </div>
 
-      <div className="w-full h-full absolute inset-0">
+      <div className="w-full h-full absolute inset-0 ">
         {/* threejs */}
         {/* <Leva /> */}
         <Canvas className="w-full h-full">

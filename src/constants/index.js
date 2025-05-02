@@ -21,49 +21,16 @@ export const navLinks = [
     },
   ];
   
-  export const clientReviews = [
-    {
-      id: 1,
-      name: 'Emily Johnson',
-      position: 'Marketing Director at GreenLeaf',
-      img: 'assets/review1.png',
-      review:
-        'Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.',
-    },
-    {
-      id: 2,
-      name: 'Mark Rogers',
-      position: 'Founder of TechGear Shop',
-      img: 'assets/review2.png',
-      review:
-        'Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional! Fantastic work.',
-    },
-    {
-      id: 3,
-      name: 'John Dohsas',
-      position: 'Project Manager at UrbanTech ',
-      img: 'assets/review3.png',
-      review:
-        'I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.',
-    },
-    {
-      id: 4,
-      name: 'Ether Smith',
-      position: 'CEO of BrightStar Enterprises',
-      img: 'assets/review4.png',
-      review:
-        'Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend backend dev are top-notch.',
-    },
-  ];
+  
   
   export const myProjects = [
     {
-      title: 'Podcastr - AI Podcast Platform',
-      desc: 'Podcastr is a revolutionary Software-as-a-Service platform that transforms the way podcasts are created. With advanced AI-powered features like text-to-multiple-voices functionality, it allows creators to generate diverse voiceovers from a single text input.',
+      title: 'Messager - Real-time Chat App',
+      desc: 'Messager is a real-time web application that enables seamless communication through instant messaging. It features a user-friendly interface and supports dynamic, interactive conversations with real-time updates using Socket.io.',
       subdesc:
-        'Built as a unique Software-as-a-Service app with Next.js 14, Tailwind CSS, TypeScript, Framer Motion and Convex, Podcastr is designed for optimal performance and scalability.',
-      href: 'https://www.youtube.com/watch?v=zfAb95tJvZQ',
-      texture: '/textures/project/project1.mp4',
+        'Built using the MERN stack — React.js, Node.js, Express.js, and MongoDB — along with Tailwind CSS and Socket.io, Messager is designed to be fast, responsive, and scalable for modern communication.',
+      href: 'https://github.com/rishigovind-tech/Messager', 
+      texture: '/textures/project/Messager.mp4',
       logo: '/assets/project-logo1.png',
       logoStyle: {
         backgroundColor: '#2A1816',
@@ -84,23 +51,34 @@ export const navLinks = [
         },
         {
           id: 3,
-          name: 'TypeScript',
-          path: '/assets/typescript.png',
+          name: 'Node.js',
+          path: '/assets/nodejs.png',
         },
         {
           id: 4,
-          name: 'Framer Motion',
-          path: '/assets/framer.png',
+          name: 'Express.js',
+          path: '/assets/expressjs.png',
+        },
+        {
+          id: 5,
+          name: 'Socket.io',
+          path: '/assets/socket-io.png',
+        },
+        {
+          id: 6,
+          name: 'MongoDB',
+          path: '/assets/mongodb.png',
         },
       ],
     },
+    
     {
-      title: 'LiveDoc - Real-Time Google Docs Clone',
-      desc: 'LiveDoc is a powerful collaborative app that elevates the capabilities of real-time document editing. As an enhanced version of Google Docs, It supports millions of collaborators simultaneously, ensuring that every change is captured instantly and accurately.',
+      title: 'Living Crafts - Online Dress Shopping Site',
+      desc: 'Living Crafts is a modern e-commerce platform that allows users to browse and purchase a wide range of stylish clothing. With a sleek UI and smooth user experience, it simplifies online fashion shopping for everyone.',
       subdesc:
-        'With LiveDoc, users can experience the future of collaboration, where multiple contributors work together in real time without any lag, by using Next.js and Liveblocks newest features.',
-      href: 'https://www.youtube.com/watch?v=y5vE8y_f_OM',
-      texture: '/textures/project/project2.mp4',
+        'Built using React.js, Node.js, Express.js, MongoDB, and styled with Tailwind CSS, Living Crafts delivers dynamic product pages, secure checkout, and responsive design for all devices.',
+      href: 'https://github.com/rishigovind-tech/E-commerce', 
+      texture: '/textures/project/e-comm.mp4',
       logo: '/assets/project-logo2.png',
       logoStyle: {
         backgroundColor: '#13202F',
@@ -121,23 +99,29 @@ export const navLinks = [
         },
         {
           id: 3,
-          name: 'TypeScript',
-          path: '/assets/typescript.png',
+          name: 'Node.js',
+          path: '/assets/nodejs.png',
         },
         {
           id: 4,
-          name: 'Framer Motion',
-          path: '/assets/framer.png',
+          name: 'Express.js',
+          path: '/assets/expressjs.png',
+        },
+        {
+          id: 5,
+          name: 'MongoDB',
+          path: '/assets/mongodb.png',
         },
       ],
     },
+    
     {
-      title: 'CarePulse - Health Management System',
-      desc: 'An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.',
+      title: 'Estate - Real Estate Web Application',
+      desc: 'Estate is a modern real estate platform where users can explore, wishlist, and inquire about property listings with ease. Designed with user-centric functionality, it offers an intuitive experience for both buyers and sellers.',
       subdesc:
-        'With a focus on efficiency, CarePulse integrantes complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.',
-      href: 'https://www.youtube.com/watch?v=lEflo_sc82g',
-      texture: '/textures/project/project3.mp4',
+        'Built using React.js, Tailwind CSS, and Framer Motion, this application features property wishlists, dynamic listing pages, and smooth UI animations to enhance user engagement and navigation.',
+      href: 'https://github.com/rishigovind-tech/Real-Estate', 
+      texture: '/textures/project/realestate.mp4',
       logo: '/assets/project-logo3.png',
       logoStyle: {
         backgroundColor: '#60f5a1',
@@ -160,23 +144,19 @@ export const navLinks = [
         },
         {
           id: 3,
-          name: 'TypeScript',
-          path: '/assets/typescript.png',
-        },
-        {
-          id: 4,
           name: 'Framer Motion',
           path: '/assets/framer.png',
         },
       ],
     },
+    
     {
-      title: 'Horizon - Online Banking Platform',
-      desc: 'Horizon is a comprehensive online banking platform that offers users a centralized finance management dashboard. It allows users to connect multiple bank accounts, monitor real-time transactions, and seamlessly transfer money to other users.',
+      title: 'QuantumAI - Landing Page for a GPT Company',
+      desc: 'QuantumAI is a sleek, modern landing page designed for a generative AI company. It highlights cutting-edge GPT-powered services, product features, and company mission—all crafted to capture user attention and build trust.',
       subdesc:
-        'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
-      href: 'https://www.youtube.com/watch?v=PuOVqP_cjkE',
-      texture: '/textures/project/project4.mp4',
+        'Developed using React.js and Tailwind CSS, the page combines responsive layouts, smooth animations, and a professional design to create a compelling first impression for AI-focused startups.',
+      href: 'https://github.com/rishigovind-tech/QuantumAI',
+      texture: '/textures/project/landing.mp4',
       logo: '/assets/project-logo4.png',
       logoStyle: {
         backgroundColor: '#0E1F38',
@@ -195,55 +175,10 @@ export const navLinks = [
           name: 'TailwindCSS',
           path: 'assets/tailwindcss.png',
         },
-        {
-          id: 3,
-          name: 'TypeScript',
-          path: '/assets/typescript.png',
-        },
-        {
-          id: 4,
-          name: 'Framer Motion',
-          path: '/assets/framer.png',
-        },
       ],
     },
-    {
-      title: 'Imaginify - AI Photo Manipulation App',
-      desc: 'Imaginify is a groundbreaking Software-as-a-Service application that empowers users to create stunning photo manipulations using AI technology. With features like AI-driven image editing, a payments system, and a credits-based model.',
-      subdesc:
-        'Built with Next.js 14, Cloudinary AI, Clerk, and Stripe, Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.',
-      href: 'https://www.youtube.com/watch?v=Ahwoks_dawU',
-      texture: '/textures/project/project5.mp4',
-      logo: '/assets/project-logo5.png',
-      logoStyle: {
-        backgroundColor: '#1C1A43',
-        border: '0.2px solid #252262',
-        boxShadow: '0px 0px 60px 0px #635BFF4D',
-      },
-      spotlight: '/assets/spotlight5.png',
-      tags: [
-        {
-          id: 1,
-          name: 'React.js',
-          path: '/assets/react.svg',
-        },
-        {
-          id: 2,
-          name: 'TailwindCSS',
-          path: 'assets/tailwindcss.png',
-        },
-        {
-          id: 3,
-          name: 'TypeScript',
-          path: '/assets/typescript.png',
-        },
-        {
-          id: 4,
-          name: 'Framer Motion',
-          path: '/assets/framer.png',
-        },
-      ],
-    },
+    
+    
   ];
   
   export const calculateSizes = (isSmall, isMobile, isTablet) => {
