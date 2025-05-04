@@ -124,11 +124,11 @@ export const navLinks = [
       texture: '/textures/project/realestate.mp4',
       logo: '/assets/project-logo3.png',
       logoStyle: {
-        backgroundColor: '#60f5a1',
+        backgroundColor: '#1e1e2f', // Dark base color
         background:
-          'linear-gradient(0deg, #60F5A150, #60F5A150), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)',
-        border: '0.2px solid rgba(208, 213, 221, 1)',
-        boxShadow: '0px 0px 60px 0px rgba(35, 131, 96, 0.3)',
+          'linear-gradient(0deg, #1e1e2f 0%, #2c2c3c 100%)', // Dark gradient
+        border: '0.2px solid rgba(255, 255, 255, 0.1)', // Subtle border for contrast
+        boxShadow: '0px 0px 60px 0px rgba(0, 0, 0, 0.5)', // Soft dark glow
       },
       spotlight: '/assets/spotlight3.png',
       tags: [

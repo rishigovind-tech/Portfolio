@@ -1,13 +1,32 @@
-import React from "react";
+import React, { Suspense, useState } from "react";
 import { myProjects } from "../constants";
+import { Canvas } from "@react-three/fiber";
+import { Center, OrbitControls } from "@react-three/drei";
+import CanvasLoader from "./CanvasLoader";
+import DemoComputer from "./DemoComputer";
+
+const projectCount = myProjects.length;
 
 const Project = () => {
-  const currentproject = myProjects[0];
+  const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
+
+  const currentproject = myProjects[selectedProjectIndex];
+
+  const handleNavigation = (direction) => {
+    setSelectedProjectIndex((prevIndex) => {
+      if (direction === "previous") {
+        return prevIndex === 0 ? projectCount - 1 : prevIndex - 1;
+      } else {
+        return prevIndex === projectCount - 1 ? 0 : prevIndex + 1;
+      }
+    });
+  };
+
   return (
     <section className="c-space my-20">
       <p className="head-text">My Projects</p>
 
-      <div className="grid lg:grid-col-2 grid-cols-1 mt-12 gap-5 w-full">
+      <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
         <div className="flex flex-col gap-5 relative sm:py-10 py-10 px-5 shadow-2xl">
           <div className=" absolute top-0 right-0">
             <img
@@ -42,16 +61,64 @@ const Project = () => {
                 </div>
               ))}
             </div>
-            <a className="flex items-center gap-2 cursor-pointer text-white-600 " href={currentproject.href} target="_blank" rel="noreferrer">
+            <a
+              className="flex items-center gap-2 cursor-pointer text-white-600 "
+              href={currentproject.href}
+              target="_blank"
+              rel="noreferrer"
+            >
               <p>Check Git Repo</p>
-              <img src="/assets/arrow-up.png" className="w-3 h-3" alt="arrow"  />
+              <img src="/assets/arrow-up.png" className="w-3 h-3" alt="arrow" />
             </a>
           </div>
 
-          <div>
-            
+          <div className="flex justify-between items-center mt-7">
+            <button
+              className="arrow-btn"
+              onClick={() => handleNavigation("previous")}
+            >
+              <img
+                src="/assets/left-arrow.png"
+                alt="left-arrow"
+                className="w-4 h-4"
+              />
+            </button>
+            <button
+              className="arrow-btn"
+              onClick={() => handleNavigation("next")}
+            >
+              <img
+                src="/assets/right-arrow.png"
+                alt="right-arrow"
+                className="w-4 h-4"
+              />
+            </button>
           </div>
         </div>
+        {/* -------3D Computer Model-------------- */}
+
+        <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
+          <Canvas>
+            <ambientLight intensity={Math.PI} />
+            <directionalLight position={[10,10,5]}/>
+            <Center>
+              <Suspense fallback={<CanvasLoader/>}>
+
+              <group scale={2} position={[0,-3,0]} rotation={[0,-0.1,0]}>
+                <DemoComputer texture={currentproject.texture}/>
+
+
+              </group>
+               
+              </Suspense>
+            </Center>
+            <OrbitControls maxPolarAngle={Math.PI/2} enableZoom={false}/>
+          </Canvas>
+
+        </div>
+
+
+
       </div>
     </section>
   );
